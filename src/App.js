@@ -1,16 +1,16 @@
 import React from "react";
 import "assets/css/style.css";
-import Header from "components/Header";
+import MainHeader from "components/common/MainHeader";
 import Hero from "components/Hero";
 import About from "components/About";
 import Design from "components/Design";
 import Download from "components/Download";
-import Footer from "components/Footer";
+import Footer from "components/common/Footer";
 
 function App() {
   return (
     <>
-      <Header />
+      <MainHeader />
       <Hero />
       <About />
       <Design />

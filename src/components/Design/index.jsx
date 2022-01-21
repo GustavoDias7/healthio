@@ -3,38 +3,52 @@ import ImgWrench from "assets/images/wrench.png";
 import ImgView from "assets/images/view.png";
 import ImgColor from "assets/images/color.png";
 import ImgAppSite from "assets/images/app-side.png";
+import Styled from "./Styled";
+import { Button, Container, Grid } from "@mui/material";
 
 const Design = () => {
   return (
-    <div id="design">
-      <div className="design-text">
-        <h1>
-          A integração de design
-          <br />e tecnologia
-        </h1>
-        <p>
-          A tecnologia de ultima geração faz com que seja possível desenhar
-          soluções úteis.
-        </p>
-        <div className="design-text-topics">
-          <img src={ImgWrench} alt="Wrench" />
-          <h2>Login seguro com a digital</h2>
-        </div>
+    <Styled id="design">
+      <Container maxWidth="lg">
+        <Grid container>
+          <Grid item md={7} sm={12} xs={12}>
+            <h2>
+              A integração de design
+              <br />e tecnologia
+            </h2>
+            <p>
+              A tecnologia de ultima geração faz com que seja possível desenhar
+              soluções úteis.
+            </p>
 
-        <div className="design-text-topics">
-          <img src={ImgView} alt="View" />
-          <h2>Modo escuro como nas atuais tendências do design</h2>
-        </div>
+            <ul>
+              <li>
+                <img src={ImgWrench} alt="Wrench" />
+                <p>Login seguro com a digital</p>
+              </li>
+              <li>
+                <img src={ImgView} alt="View" />
+                <p>Modo escuro como nas atuais tendências do design</p>
+              </li>
+              <li>
+                <img src={ImgColor} alt="Color" />
+                <p>Cores bonitas que juntas criam uma aparência incrível</p>
+              </li>
+            </ul>
 
-        <div className="design-text-topics">
-          <img src={ImgColor} alt="Color" />
-          <h2>Cores bonitas que juntas criam uma aparência incrível</h2>
-        </div>
-        <button>Download App</button>
-      </div>
-      <img src={ImgAppSite} alt="App Site" />
-      <div className="circle" />
-    </div>
+            <Button href="/" variant="contained">
+              Download App
+            </Button>
+          </Grid>
+          <Grid item md={5} sm={12} xs={12}>
+            <div className="design-image">
+              <img className="phone" src={ImgAppSite} alt="App Site" />
+              <div className="circle" />
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
+    </Styled>
   );
 };
 
